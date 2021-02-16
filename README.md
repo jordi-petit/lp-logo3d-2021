@@ -132,10 +132,10 @@ Fixeu-vos que les fases 1 i 2 són totalment independents i no és fins a la
 fase 3 que es posen en comú. Si heu separat bé 1 de 2, aquesta integració
 hauria de ser ben senzilla.
 
-A continuació s'especifiquen amb més detall els elements de cada fase.
+A continuació s'especifiquen amb més detall els elements necessaris.
 
 
-## El llenguatge Logo3D: Especificació
+## Especificació de Logo3D
 
 Les instruccions de Logo3D són:
 
@@ -180,7 +180,7 @@ La instrucció iterativa amb `WHILE` té la semàntica habitual.
 
 La instrucció iterativa amb `FOR` té la semàntica habitual, tenint en compte
 que els valors d'inici i de final es calculen abans d'iterar. Compte: El valor
-de la variable de control pot ser canviat dins de la iteració.
+de la variable de control pot ser canviat dins del cos de la iteració.
 
 
 ### Invocació de procediment
@@ -214,8 +214,8 @@ d'accedir a variables d'altres procediments.
 
 Malgrat que Logo3D és força senzill, els programadors poden realitzar molts
 errors. Per aquesta pràctica, només us demanem que detecteu els errors més
-verosímils (divisió per zero, crida a procediment no definit,
-nombre de paràmetres incorrectes, noms de paràmetres
+verosímils (divisió per zero, crida a procediment no definit, repetició de
+procediment ja definit, nombre de paràmetres incorrectes, noms de paràmetres
 formals repetits, ...) i aborteu el programa amb una excepció quan es dónen.
 
 
@@ -244,12 +244,21 @@ Podeu extendre el llenguatge amb construccions del vostre gust, a condició de m
 una compatibilitat estricta amb l'especificació donada. A més, cal que documenteu
 amb precisió les vostres extensions.
 
-Per exemple, podríeu extendre Logo3D amb funcions que retornin valors, amb variables de
+Per exemple, podríeu extendre Logo3D amb operadors lògics,
+funcions que retornin valors, amb variables de
 tipus text, ...
 
 Compte: Les extensions poden portar molta feina, consulteu-ho abans amb el vostre professor.
 
 
+## Especificació de la classe Turtle3D
+
+TBD
+
+
+# Lliurament
+
+TBD
 
 
 
