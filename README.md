@@ -25,21 +25,32 @@ avançada, com ara la recursivitat.
 El llenguatge de programació Logo3D modernitza el LOGO clàssic adoptant una
 nova i elegant sintàxi i situant la popular tortuga en un entorn 3D!
 
-Per exemple, aquesta forma geomètrica en escala
+Per exemple, aquesta atractiva forma geomètrica en espiral
 
-DIBUIX
+![](demo.png)
 
 es pot obtenir amb aquest programa:
 
 ```
-PROC escala() IS
-    FOR i FROM 1 TO 20 DO
-        forward(10)
-        up(90)
-        forward(2)
-        down(90)
-        right(90)
+// Programa de demostracio en Logo3D.
+
+PROC cercle(mida, costats) IS
+    FOR i FROM 1 TO costats DO
+        forward(mida)
+        left(360 / costats)
     END
+END
+
+PROC espiral(cercles) IS
+    IF cercles > 0 THEN
+        cercle(1, 12)
+        up(5)
+        espiral(cercles - 1)
+    END
+END
+
+PROC main() IS
+    espiral(5)
 END
 ```
 
@@ -104,11 +115,9 @@ END
 
 dibuixa un quadrat amb un delicat to blau (donat amb `color()`)
 de la mida requerida tot movent la tortuga endavant (`forward`) i a l'esquerra
-(`left`) quatre cops:
+(`left`) quatre cops.
 
-DIBUIX
-
-La tortuga comença a l'orígen de les coordenades mirant horitzontalment cap a
+La tortuga (🐢) comença a l'orígen de les coordenades mirant horitzontalment cap a
 la dreta i amb color roig. El seu rumb es pot canviar amb `left()` i `right()`
 per l'angle horitzontal i amb `up()` i `down()` per l'angle vertical. Els angles es
 dónen en graus. En l'estat normal, quan la tortuga avança o retrocedeix
@@ -195,7 +204,7 @@ Exemple: `WHILE a > 0 DO a := a / 2 END`.
 La instrucció iterativa amb `FOR` té la semàntica habitual, tenint en compte
 que els valors d'inici i de final es calculen abans d'iterar. Compte: El valor
 de la variable de control pot ser canviat dins del cos de la iteració.
-Exemple: `FOR i FROM 1 TO 5 DO << i END`.
+Exemple: `FOR i FROM 1 TO 5 DO i := 1 + 1 << i END`.
 
 
 ### Invocació de procediment
@@ -366,7 +375,7 @@ que, al descomprimir-se generi:
   - vegeu, per exemple, https://pip.pypa.io/en/stable/user_guide/#requirements-files.
 
 - Un fitxer `README.md` que el documenti
-  - vegeu, per exemple, https://gist.github.com/PurpleBooth/109311bb0361f32d87a2.
+  - vegeu, per exemple, https://www.makeareadme.com/.
 
 - Un fitxer `logo3d.py` amb el programa principal de l'intèrpret.
 
