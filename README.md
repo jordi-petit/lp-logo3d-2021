@@ -25,11 +25,10 @@ avançada, com ara la recursivitat.
 El llenguatge de programació Logo3D modernitza el LOGO clàssic adoptant una
 nova i elegant sintàxi i situant la popular tortuga en un entorn 3D!
 
-Per exemple, aquesta atractiva forma geomètrica en espiral
-
 ![](demo.png)
 
-es pot obtenir amb aquest programa:
+Per exemple, l'atractiva forma geomètrica en espiral
+de la figura anterior es pot obtenir amb aquest programa:
 
 ```
 // Programa de demostracio en Logo3D.
@@ -226,7 +225,7 @@ operadors aritmètics són els habituals (`+`, `-`, `*`, `/`) i amb la mateixa
 prioritat que en matemàtiques. Evidentment, es poden usar parèntesis. El
 operadors relacionals (`==`, `!=`, `<`, `>`, `<=`, `>=`) retornen zero per
 fals i u per cert. Quan cal interpretar un valor com a booleà (als `WHILE`s i
-`IF`s), zero és fals, qualsevol altre valor és cert.
+`IF`s), un valor entre -1e-6 i 1e-6 és fals, qualsevol altre valor és cert.
 
 
 ### Àmbit de visibilitat
@@ -242,7 +241,7 @@ Malgrat que Logo3D és força senzill, els programadors poden realitzar molts
 errors. Per aquesta pràctica, només us demanem que detecteu els errors més
 verosímils (divisió per zero, crida a procediment no definit, repetició de
 procediment ja definit, nombre de paràmetres incorrectes, noms de paràmetres
-formals repetits, ...) i aborteu el programa amb una excepció quan es dónen.
+formals repetits, ...) i que el programa aborti amb una excepció quan es dónen.
 
 
 ### Invocació
@@ -281,7 +280,7 @@ Compte: Les extensions poden portar molta feina, consulteu-ho abans amb el vostr
 
 ## Especificació de la classe Turtle3D
 
-La vostra pràctica ha d'incloure un mòdul que ofereixi la classe `Turtle3D`. Aquesta classe
+La vostra pràctica ha d'incloure un mòdul `turtle3d` que ofereixi la classe `Turtle3D`. Aquesta classe
 ha de ser totalment independent de l'intèrpret (tot i que aquest l'acabarà utilitzant).
 
 Aquest és un exemple d'ús d'aquesta classe:
@@ -302,14 +301,14 @@ del mateix radi al seu extrem (perquè quedi maco).
 
 L'única llibreria no estàndard que heu utilitzar en aquesta fase és `vpython`.
 
-Per dissenyar i implementar la classe `Turtle3D` haureu de prendre diverses decisions.
+Per dissenyar i implementar la classe `Turtle3D` haureu de prendre diverses decisions:
 
 - decidir els atributs de la classe,
 - especificar i documentar les operacions públiques,
 - decidir les operacions privades...
 
 Intenteu oferir un API ric, útil i ben documentat per aquesta classe.
-Utilitzeu constants, constructors adeqüats, paràmetres opcionals, mètodes,
+Utilitzeu adientment constants, constructors adeqüats, paràmetres opcionals, mètodes,
 mètodes estàtics... i useu *docstrings* per la seva documentació.
 
 
@@ -320,6 +319,8 @@ Per instal·lar el mòdul `vpython`, feu
 ```bash
 pip3 install vpython
 ```
+
+(Segons el vostre sistema, potser us cal demanr-ho amb un `sudo`.)
 
 Aquest programa mostra com utilitzar-lo:
 
@@ -381,11 +382,11 @@ que, al descomprimir-se generi:
 
 - Un fitxer `logo3d.g` amb la gramàtica del LP.
 
-- Un fitxer `visitor.g` amb el visitador de l'AST.
+- Un fitxer `visitor.py` amb el visitador de l'AST.
 
 - Un fitxer `turtle3d.py` que contingui la classe `Turtle3D`.
 
-- Si heu fet extensions, podeu afegir fitxers `test-***.l3d` com a exemples i jocs de proves.
+- Si heu fet extensions, podeu afegir fitxers `test-*.l3d` com a exemples i jocs de proves.
 
 Els vostres fitxers de codi en Python han de seguir les regles d’estı́l PEP8,
 tot i que podeu oblidar les restriccions sobre la llargada màxima de les lı́nies.
@@ -394,7 +395,7 @@ que seguiu aquestes regles d’estı́l. L’ús de tabuladors en el codi queda 
 (zero directe). Els vostres programes en Logo3D han de seguir l'estíl exposat en aquest
 document, que demostra bon gust i *savoir-faire*.
 
-El termini de lliurament és el **??? a les 23:59**.
+El termini de lliurament és el **diumenge 13 de juny a les 23:59**.
 
 Per evitar problemes de còpies,
 no pengeu el vostre projecte en repositoris públics.
@@ -408,7 +409,7 @@ Utilitzeu les llibreries de Python següents:
 
 - `ANTLR` per escriure la gramàtica i l'intèrpret.
 
-Podeu utilitzar lliurament altres llibreries **estàndards** de Python.
+Podeu utilitzar lliurament les llibreries **estàndards** de Python.
 
 
 # Referències
