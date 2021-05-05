@@ -139,10 +139,10 @@ Us proposem organitzar el vostre treball en tres fases:
 1. Realització de l'intèrpret de Logo3D (sense tortuga). Cal escriure la gramàtica
    i els visitadors que recorrin l'AST d'un programa en Logo3D tot interpretant-lo.
 
-2. Implementació una classe Turtle3D que doni suport a la creació
+2. Implementació d'una classe Turtle3D que doni suport a la creació
    d'escenes 3D a través d'una tortuga (totalment independent de l'intèrpret).
 
-3. Extendre l'intèrpret per tal que permeti usar la classe Turtle3D.
+3. Extensió de l'intèrpret per tal que permeti usar la classe Turtle3D.
 
 Fixeu-vos que les fases 1 i 2 són totalment independents i no és fins a la
 fase 3 que es posen en comú. Si heu separat bé 1 de 2, aquesta integració
@@ -203,7 +203,7 @@ Exemple: `WHILE a > 0 DO a := a / 2 END`.
 La instrucció iterativa amb `FOR` té la semàntica habitual, tenint en compte
 que els valors d'inici i de final es calculen abans d'iterar. Compte: El valor
 de la variable de control pot ser canviat dins del cos de la iteració.
-Exemple: `FOR i FROM 1 TO 5 DO i := 1 + 1 << i END`.
+Exemple: `FOR i FROM 1 TO 5 DO i := i + 1 << i END`.
 
 
 ### Invocació de procediment
